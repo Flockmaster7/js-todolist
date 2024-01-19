@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="add-area">
+        <h2>TodoList</h2>
+        <div>
+          <input
+            class="add-input"
+            id="add"
+            type="text"
+            placeholder="添加ToDo"
+            onkeydown="addTodo()"
+          />
+          <button onclick="addLargeTodo(10000)">+10000</button>
+          <button onclick="addLargeTodo(10)">+10</button>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="top">
+          <div class="title">正在进行</div>
+          <p id="todoTotal" class="value">0</p>
+        </div>
+        <div class="list-container">
+          <ul id="todoList" class="list"></ul>
+        </div>
+        <div class="top">
+          <div class="title">已经完成</div>
+          <div id="doneTotal" class="value">0</div>
+        </div>
+        <ul id="doneList" class="list"></ul>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
